@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun, Cinta!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    }
+    .hero h1 {
+      font-size: 4rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+    }
+    .btn-custom {
+      margin: 10px;
+      border-radius: 30px;
+    }
+    .section {
+      padding: 60px 20px;
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .active-section {
+      display: block !important;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+    }
+    footer {
+      background-color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    #musicButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffffffcc;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Selamat Ulang Tahun, Sayangkuu! ❤️</h1>
+    <p>Hari ini milikmu. Semoga apapun yang kamu harapkan bisa secepatnya terkabul yaa.</p>
+    <div class="mt-4">
+      <button class="btn btn-light btn-custom" onclick="showSection('galeri')">📸 Galeri Kenangan</button>
+      <button class="btn btn-light btn-custom" onclick="showSection('video')">🎥 Video Ucapan</button>
+      <button class="btn btn-light btn-custom" onclick="showSection('cerita')">📖 Cerita Kita</button>
+      <button class="btn btn-light btn-custom" onclick="showSection('doa')">🙏 Doa dan Harapan</button>
+    </div>
+  </div>
+
+  <section id="galeri" class="section container active-section">
+    <h2 class="text-center mb-4">Galeri Kenangan Kita</h2>
+    <div class="row g-4 gallery">
+      <!-- Ganti path gambar sesuai kebutuhan -->
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0079.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0076.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0052.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0007.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0011.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0013.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0014.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0018.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0020.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0022.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0059.jpg" alt="Kenangan" class="img-fluid"></div>
+      <div class="col-12 col-sm-6 col-md-4"><img src="img/IMG-20250603-WA0064.jpg" alt="Kenangan" class="img-fluid"></div>
+    </div>
+  </section>
+
+  <section id="video" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Video Ucapan untuk Kamu</h2>
+      <div class="row g-4">
+        <!-- Gunakan <video> bukan <iframe> untuk file lokal -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <video class="w-100 rounded" controls>
+            <source src="img/VID-20250603-WA0006.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <video class="w-100 rounded" controls>
+            <source src="img/VID-20250603-WA0007.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <video class="w-100 rounded" controls>
+            <source src="img/VID-20250603-WA0008.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+          <video class="w-100 rounded" controls>
+            <source src="img/VID-20250603-WA0010.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+          <video class="w-100 rounded" controls>
+            <source src="img/VID-20250603-WA0011.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cerita" class="section container">
+    <h2 class="text-center mb-4">Cerita Kita</h2>
+    <p class="lead text-center">Hiii cantikkkus, inget gak kita ketemu tanggal berapa? Yapss betul 05 Oktober 2025, disitulahhh aku pertama kalinya melihat dirimu dan langsung jantuh cinta, kenapa bisa gitu???? aku gatau cantikk ini bener bener cinta pandangan pertama, di situ juga aku berjanji akan mendapatkan mu, kalo gadapet ya harus dapet wkwkwkwk (agak maksa yaa) tapi bener ya tuhan tau apa yang kita harapkan dan terbaik untuk aku, dan alhamdulillah banget bisa ketemu dan kenal kamu, sekarang ganyangka bisa jadi pacar kamu, dan aku berharap kamu jadi istri akuu, semoga bisa yaa 2027 akuu nikahin kamuuu, aku akan berusahaa semaksimal mungkin untuk mewujudkan mimpi kita ya sayanggg (Aamiin Aamiin YaAllah) </p>
+  </section>
+
+  <section id="doa" class="section bg-warning bg-gradient text-dark">
+    <div class="container">
+      <h2 class="text-center mb-4">Hiiii cantikkk!!! Selamat ulang tahun yaaa sayangku❤❤❤
+Doa-doa dan harapan untuk sayangkuu:
+</h2>
+      <ul class="fs-5">
+        <li>Panjang Umur.</li>
+        <li>Selalu sehat.</li>
+        <li>⁠selalu dimudahkan rezekinya.</li>
+        <li>Selalu diberi Kelancaran dalam hal apapun ❤️</li>
+        <li>Semoga bisa mendapatkan pekerjaan dibidang MIGAS❤️</li>
+        <li>⁠Semoga bisa mengontrol Emosi.</li>
+        <li>⁠Semoga bisa lebih baik lagi me-manage waktu.</li>
+        <li>Semoga bisa sholat di awal waktu.</li>
+        <li>⁠Semoga bisa menjadi konten kreator yang terkenal ❤️</li>
+        <li>⁠Semoga bisa menjadi anak yang sholehah ❤️</li>
+        <li>Semoga Bisa pengusaha yang sukses.</li>
+        <li>semoga bisa menjadi anak yang membanggakan orang tua.</li>
+        <li>Semoga bisa bekerja di Australia.</li>
+        <li>semoga bisa menjadi orang yang sukses ❤️</li>
+        <li>⁠semoga bisa rajin lagi olahraga ❤️</li>
+        <li>⁠semoga bisa melawan diri sendiri.</li>
+        <li>semoga bisa membiasakan bangun pagi.</li>
+        <li>semoga selalu diberi kekuatan dalam hal apapun.</li>
+        <li>Semoga selalu diberikan ide ide kreatif yang bisa menjadi lebih baik ❤️</li>
+        <li>Semoga menjadi orang yang sukses dunia akhirat ❤️</li>
+        <li>semoga semua tujuan nya tercapai.</li>
+        <li>⁠semoga harapan harapan ayang terkabul secepatnya</li>
+        <li> ⁠semoga bisa menjadi pasangan yang baik untuk akuu🥰❤️</li>
+        <li>⁠dan terakhir spesial, ( bisa menjadi istri aku di 2027 yaa)❤️❤️❤️❤️</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>❤️ Dibuat dengan sepenuh hati oleh seseorang yang sangat mencintaimu ❤️</p>
+  </footer>
+
+  <!-- Musik -->
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="lagu/Anne-Marie - BIRTHDAY [Official Video].mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutar audio.
+  </audio>
+
+  <!-- Tombol Musik -->
+  <button id="musicButton" onclick="toggleMusic()">🎵</button>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => section.classList.remove('active-section'));
+      document.getElementById(id).classList.add('active-section');
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById('backgroundMusic');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const music = document.getElementById("backgroundMusic");
+      const playMusic = () => {
+        music.play().catch(() => {});
+        document.removeEventListener("click", playMusic);
+        document.removeEventListener("touchstart", playMusic);
+      };
+      document.addEventListener("click", playMusic);
+      document.addEventListener("touchstart", playMusic);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
